@@ -5,12 +5,18 @@ using System.Collections.Generic;
 namespace HeyWeek{
 
 	public class PriorityQueue <T> where T : IComparable<T> {
-		private List<T> data;
 
+		#region Fields
+		private List<T> data;
+		#endregion
+
+		#region Constructor
 		public PriorityQueue(){
 			this.data = new List<T>();
 		}
+		#endregion
 
+		#region Public
 		public void Enqueue(T item){
 			data.Add(item);
 			int child = data.Count - 1;
@@ -77,12 +83,7 @@ namespace HeyWeek{
 			return data.Contains(n);
 		}
 
-		private void Swap(int i, int j){
-			T tmp = data[i];
-			data[i] = data[j];
-			data[j] = tmp;
-		}
-
+		// TODO: Check this method
 		public void FullRefresh(){
 			int child = data.Count - 1;
 			while(child > 0){
@@ -96,12 +97,20 @@ namespace HeyWeek{
 
 			PrintQueueContent();
 		}
+		#endregion
+
+		#region Helpers
+		private void Swap(int i, int j){
+			T tmp = data[i];
+			data[i] = data[j];
+			data[j] = tmp;
+		}
 
 		public void PrintQueueContent(){
 			foreach(T n in data){
 				Console.WriteLine(" | " +  (n as Node).cost);
 			}
 		}
-
+		#endregion
 	}
 }

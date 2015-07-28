@@ -5,9 +5,12 @@ namespace HeyWeek{
 
 	public class NodeGraph{
 
+		#region Fields
 		public Dictionary<NodePair, int> costTable = new Dictionary<NodePair, int>();
-		List<Node> graphNodes = new List<Node>();
+		public List<Node> graphNodes = new List<Node>();
+		#endregion
 
+		#region Static (Create)
 		public static NodeGraph Create(string content){
 			NodeGraph graph = new NodeGraph();
 
@@ -33,7 +36,9 @@ namespace HeyWeek{
 
 			return null;
 		}
+		#endregion
 
+		#region Helpers
 		private void AddToCostTable(string name_1, string name_2, int cost){
 			NodePair nPair = new NodePair(name_1, name_2);
 			if(!costTable.ContainsKey(nPair)){
@@ -69,7 +74,7 @@ namespace HeyWeek{
 			}
 
 		}
-
+		#endregion
 
 	}
 }

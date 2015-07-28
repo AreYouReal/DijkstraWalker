@@ -8,7 +8,6 @@ namespace HeyWeek{
 			try{
 				using(StreamReader reader = new StreamReader(path)){
 					fileContent = reader.ReadToEnd();
-//					Console.WriteLine(fileContent);
 				}
 			}catch(Exception e){ Console.WriteLine(e.Message); }
 			return fileContent;
