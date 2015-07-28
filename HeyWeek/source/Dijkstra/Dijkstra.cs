@@ -1,29 +1,41 @@
 using System;
+using System.Collections.Generic;
 
 namespace HeyWeek{
 
 	public class Dijkstra{
 
-		public static bool Search(Node start, Node goal){
-			PriorityQueue<Node> open;
+		private List<Node> graph;
+		private Dictionary<NodePair, int> costTable;
+
+		private List<Node> theShortestPath;
+
+		public Dijkstra(List<Node> g, Dictionary<NodePair, int> ct){
+			graph = g;
+			costTable = ct;
+		}
+
+		public bool Search(Node start, Node goal){
+			PriorityQueue<Node> open = new PriorityQueue<Node>();
 			Node n, child;
 	
 			start.parent 	= null;
 			start.cost 		= 0;
 
-			open.Enqueue(start);
+			open.Enqueue(graph[graph.IndexOf(start)]);
 			while(!open.Empty()){
 				n = open.Dequeue();
 				n.visited = true;
 				if(n.Equals(goal)){
-					//MakePath();
+					theShortestPath = MakePath();
+					Console.WriteLine("Goal has reached!");
 					return true;
 				}
 
 				while(n.HasMoreChildren){
 					child = n.GetNextChildren();
-					int newCost = n.cost + Cost(n, child);
 					if(child.visited) continue;
+					int newCost = n.cost + Cost(n, child);
 					if(open.Contains(child) && child.cost <= newCost) continue;
 					child.parent = n;
 					child.cost = newCost;
@@ -35,10 +47,17 @@ namespace HeyWeek{
 			return false;
 		}
 
+		private int Cost(Node n1, Node n2){
+			NodePair np = new NodePair(n1, n2);
+			if(costTable.ContainsKey(np)) return costTable[np];
+			else Console.WriteLine("Error: Unable to find path cost!");
 
-
-		private static int Cost(Node n1, Node n2){
 			return -1;
+		}
+
+		private List<Node> MakePath(){
+			Console.WriteLine("Making path");
+			return null;
 		}
 	}
 }

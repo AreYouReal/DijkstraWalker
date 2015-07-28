@@ -6,6 +6,9 @@ namespace HeyWeek{
 	public class NodeGraph{
 
 		#region Fields
+		public Node start;
+		public Node	goal;
+
 		public Dictionary<NodePair, int> costTable = new Dictionary<NodePair, int>();
 		public List<Node> graphNodes = new List<Node>();
 		#endregion
@@ -14,8 +17,11 @@ namespace HeyWeek{
 		public static NodeGraph Create(string content){
 			NodeGraph graph = new NodeGraph();
 
-
 			string[] lines = content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+			string [] startGoal = lines[0].Split(new char[]{' ', '\t'}, StringSplitOptions.RemoveEmptyEntries);
+			graph.start = new Node(){name = startGoal[0]};
+			graph.goal = new Node(){name = startGoal[1]};
+
 			for(int i = 1; i < lines.Length; i++){
 				string [] data = lines[i].Split(new char[]{' ', '\t'}, StringSplitOptions.RemoveEmptyEntries);
 				string 	name_1 	= data[0];
@@ -34,7 +40,7 @@ namespace HeyWeek{
 				Console.WriteLine(n.ToString());
 			}
 
-			return null;
+			return graph;
 		}
 		#endregion
 
@@ -49,12 +55,13 @@ namespace HeyWeek{
 		}
 
 		private void AddToGraphList(string name_1, string name_2){
-			Node n1 = new Node(){ name = name_1 };
-			Node n2 = new Node(){ name = name_2 };
+			Node n1 = new Node(){name = name_1};
+			Node n2 = new Node(){name = name_2};
 
 			int index1 = graphNodes.IndexOf(n1);
 			int index2 = graphNodes.IndexOf(n2);
-
+			Console.WriteLine("index1: " + index1);
+			Console.WriteLine("index2: " + index2);
 			if(index1 < 0){
 				if(index2 < 0){
 					graphNodes.Add(n1);

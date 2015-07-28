@@ -1,28 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HeyWeek/source/Dijkstra/Dijkstra.cs">
-    <Files>
-      <File FileName="HeyWeek/source/Main.cs" Line="1" Column="1" />
-      <File FileName="HeyWeek/source/Dijkstra/Node.cs" Line="10" Column="4" />
-      <File FileName="HeyWeek/source/Dijkstra/Dijkstra.cs" Line="5" Column="3" />
-      <File FileName="HeyWeek/source/Dijkstra/PriorityQueue.cs" Line="5" Column="19" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Option id="ShowAllFiles" value="True" />
-          <Node name="HeyWeek" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="source" expanded="True">
-              <Node name="Dijkstra" expanded="True">
-                <Node name="Dijkstra.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
