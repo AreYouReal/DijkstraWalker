@@ -6,16 +6,24 @@ namespace HeyWeek{
 	public class NodeGraph{
 
 		#region Fields
-		public Node start;
-		public Node	goal;
+		private	Node 						start;
+		private	Node						goal;
+		private Dictionary<NodePair, int> 	costTable;
+		private List<Node> 					graphNodes;
+		#endregion
 
-		public Dictionary<NodePair, int> costTable = new Dictionary<NodePair, int>();
-		public List<Node> graphNodes = new List<Node>();
+		#region Properties
+		public Node Start{ get{ return start; }}
+		public Node Goal{ get{ return goal; }}
+		public Dictionary<NodePair, int> CostTable{ get{ return costTable; }}
+		public List<Node>	GraphMap { get{ return graphNodes; }}
 		#endregion
 
 		#region Static (Create)
 		public static NodeGraph Create(string content){
 			NodeGraph graph = new NodeGraph();
+			graph.costTable = new Dictionary<NodePair, int>();
+			graph.graphNodes = new List<Node>();
 
 			string[] lines = content.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 			string [] startGoal = lines[0].Split(new char[]{' ', '\t'}, StringSplitOptions.RemoveEmptyEntries);

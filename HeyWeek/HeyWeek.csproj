@@ -42,7 +42,7 @@
     <Compile Include="source\Dijkstra\PriorityQueue.cs" />
     <Compile Include="source\Dijkstra\NodeGraph.cs" />
     <Compile Include="source\Dijkstra\NodePair.cs" />
-    <Compile Include="source\Dijkstra\Dijkstra.cs" />
+    <Compile Include="source\Dijkstra\DijkstraWalker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
