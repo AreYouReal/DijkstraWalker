@@ -45,16 +45,6 @@ namespace HeyWeek{
 				graph.AddToCostTable(name_1, name_2, cost);
 				graph.AddToGraphList(name_1, name_2);
 			}
-
-
-			foreach(KeyValuePair<NodePair, int> kvp in graph.costTable){
-				Console.WriteLine(kvp.Key.ToString() + "\t" + kvp.Value.ToString());
-			}
-			Console.WriteLine();
-			foreach(Node n in graph.graphNodes){
-				Console.WriteLine(n.ToString());
-			}
-
 			return graph;
 		}
 		#endregion
@@ -75,8 +65,6 @@ namespace HeyWeek{
 
 			int index1 = graphNodes.IndexOf(n1);
 			int index2 = graphNodes.IndexOf(n2);
-			Console.WriteLine("index1: " + index1);
-			Console.WriteLine("index2: " + index2);
 			if(index1 < 0){
 				if(index2 < 0){
 					graphNodes.Add(n1);

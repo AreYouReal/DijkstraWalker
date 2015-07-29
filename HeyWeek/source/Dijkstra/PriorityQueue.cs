@@ -35,7 +35,7 @@ namespace HeyWeek{
 				Swap (child, parent);
 				child = parent;
 			}
-			PrintQueueContent();
+//			PrintQueueContent();
 		}
 
 		public T Dequeue(){
@@ -64,7 +64,7 @@ namespace HeyWeek{
 				parent = child;
 			}
 
-			PrintQueueContent();
+//			PrintQueueContent();
 			return frontItem;
 		}
 	
@@ -100,7 +100,7 @@ namespace HeyWeek{
 				child = parent;
 			}
 
-			PrintQueueContent();
+//			PrintQueueContent();
 		}
 		#endregion
 

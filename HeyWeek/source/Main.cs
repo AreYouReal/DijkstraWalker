@@ -24,6 +24,7 @@ namespace HeyWeek{
 				for(int i = path.Count - 1; i >= 0; i--){ thePath += (i == 0 ? path[i].name : path[i].name + " -> "); }
 				string content = string.Format("Best path cost: {0}\nPath: {1}", theBestCost, thePath);
 				FileIO.WriteToFile(content, "../../data/output.txt");
+				Console.WriteLine("Done! Please see the output file.");
 			}else{
 				Console.WriteLine(string.Format ("There is no path between {0} and {1}!", graph.Start.name, graph.Goal.name));
 			}

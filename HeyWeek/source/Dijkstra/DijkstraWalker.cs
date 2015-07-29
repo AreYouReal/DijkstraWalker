@@ -62,7 +62,6 @@ namespace HeyWeek{
 			if(n.Equals(goal)){
 				thePath = MakePath(n);
 				bestCost = n.cost;
-				Console.WriteLine("Reached the goal");
 				return SearchState.REACHED_THE_GOAL;
 			}
 			
@@ -95,7 +94,6 @@ namespace HeyWeek{
 				path.Add(n);
 				n = n.parent;
 			}
-			Console.WriteLine("Return path");
 			return path;
 		}
 		#endregion
