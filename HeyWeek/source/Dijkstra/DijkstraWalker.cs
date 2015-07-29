@@ -1,3 +1,10 @@
+/**
+*	DijkstraWalker class use on of the Dijkstra's algorithm variation.
+*	Search the shortest path in @graph according to the @costTable.
+*	@author Alexander Kolesnikov
+*
+*	email: viertual@gmail.com
+*/
 using System;
 using System.Collections.Generic;
 

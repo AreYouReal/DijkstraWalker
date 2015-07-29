@@ -1,3 +1,11 @@
+/**
+*	MainClass for demostration of the DijkstraWalker's functionality.
+*	Read the data from the @input.txt and write the result to output.txt.
+*	The result is the best path cost and the path itself. 
+*	@author Alexander Kolesnikov
+*
+*	email: viertual@gmail.com
+*/
 using System;
 using System.Collections.Generic;
 

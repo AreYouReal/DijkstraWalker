@@ -1,3 +1,10 @@
+/**
+*	NodeGraph class. Creates @graphNodes and @costTable using particular incoming data 
+*	And @goal and @start nodes as well.
+*	@author Alexander Kolesnikov
+*
+*	email: viertual@gmail.com
+*/
 using System;
 using System.Collections.Generic;
 

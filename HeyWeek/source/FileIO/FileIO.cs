@@ -1,3 +1,9 @@
+/**
+*	FileIO class. Basic text file input / output implementation.
+*	@author Alexander Kolesnikov
+*
+*	email: viertual@gmail.com
+*/
 using System;
 using System.IO;
 namespace HeyWeek{

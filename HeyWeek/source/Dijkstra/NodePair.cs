@@ -1,3 +1,10 @@
+/**
+*	NodePair class. 
+*	Using as key for storing edge cost between to graph's nodes.
+*	@author Alexander Kolesnikov
+*
+*	email: viertual@gmail.com
+*/
 using System;
 
 namespace HeyWeek{

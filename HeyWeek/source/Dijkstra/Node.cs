@@ -1,3 +1,10 @@
+/**
+*	Node class. Node represent the graph's vertex.
+*	Implements the IComparable interface. 
+*	@author Alexander Kolesnikov
+*
+*	email: viertual@gmail.com
+*/
 using System;
 using System.Collections.Generic;
 

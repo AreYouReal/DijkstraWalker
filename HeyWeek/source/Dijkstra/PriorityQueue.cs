@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*	Custom PriorityQueue implementation using BinaryHeap as underlying data structure.
+*	Provides the queue interface and sorts the nodes using IComparable interface.
+*	@author Alexander Kolesnikov
+*
+*	email: viertual@gmail.com
+*/
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -78,12 +85,10 @@ namespace HeyWeek{
 			data.Clear();
 		}
 
-		// TODO: Check this method
 		public bool Contains(T n){
 			return data.Contains(n);
 		}
 
-		// TODO: Check this method
 		public void FullRefresh(){
 			int child = data.Count - 1;
 			while(child > 0){
