@@ -108,7 +108,7 @@ namespace HeyWeek{
 
 		public void PrintQueueContent(){
 			foreach(T n in data){
-				Console.Write(" | " +  (n as Node).cost);
+				Console.Write(" | " +  (n as Node).cost + "(" + (n as Node).parent + ")" );
 			}
 			Console.WriteLine();
 		}

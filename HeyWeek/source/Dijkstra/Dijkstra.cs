@@ -10,17 +10,12 @@ namespace HeyWeek{
 
 		private List<Node> theShortestPath;
 
-		private Node start;
-		private Node goal;
-
 		public Dijkstra(List<Node> g, Dictionary<NodePair, int> ct){
 			graph = g;
 			costTable = ct;
 		}
 
 		public bool Search(Node start, Node goal){
-			this.start = start;
-			this.goal = goal;
 			PriorityQueue<Node> open = new PriorityQueue<Node>();
 			Node n, child;
 	
@@ -32,7 +27,8 @@ namespace HeyWeek{
 				n = open.Dequeue();
 				n.visited = true;
 				if(n.Equals(goal)){
-					theShortestPath = MakePath();
+					Console.WriteLine("GOLA PARENT:" + n.parent);
+					theShortestPath = MakePath(n);
 					Console.WriteLine("Goal has reached!");
 					return true;
 				}
@@ -60,13 +56,15 @@ namespace HeyWeek{
 			return -1;
 		}
 
-		private List<Node> MakePath(){
+		private List<Node> MakePath(Node goal){
 			Node n = goal.parent;
 			theShortestPath = new List<Node>();
 
 			theShortestPath.Add(goal);
 			while(n != null){
+				Console.WriteLine(n);
 				theShortestPath.Add(n);
+				n = n.parent;
 			}
 
 			foreach(Node nd in theShortestPath){
