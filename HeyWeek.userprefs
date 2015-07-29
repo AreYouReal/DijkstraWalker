@@ -1,6 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HeyWeek/source/Dijkstra/Dijkstra.cs">
+    <Files>
+      <File FileName="HeyWeek/source/Main.cs" Line="10" Column="11" />
+      <File FileName="HeyWeek/source/Dijkstra/Dijkstra.cs" Line="30" Column="24" />
+      <File FileName="HeyWeek/source/Dijkstra/PriorityQueue.cs" Line="116" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
