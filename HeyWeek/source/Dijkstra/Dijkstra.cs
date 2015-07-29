@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace HeyWeek{
 
+	public enum SearchState{ NONE, STILL_SEARCH, REACHED_THE_GOAL, UNABLE_TO_REACH}
+
 	public class Dijkstra{
 
 		private List<Node> graph;
@@ -23,6 +25,7 @@ namespace HeyWeek{
 			start.cost 		= 0;
 
 			open.Enqueue(graph[graph.IndexOf(start)]);
+
 			while(!open.Empty()){
 				n = open.Dequeue();
 				n.visited = true;
